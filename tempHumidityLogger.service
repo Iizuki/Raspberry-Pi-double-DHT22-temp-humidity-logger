@@ -1,0 +1,11 @@
+[Unit]
+Description=Reads sensors and saves data to logfile.
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 tempHumidityLogger.py
+WorkingDirectory=/home/pi
+User=pi
+
+[Install]
+WantedBy=multi-user.target
